@@ -1,0 +1,264 @@
+/* Valores extraídos del CSS real de Blackboard Ultra (ulima) */
+* {
+  box-sizing: border-box;
+}
+
+.bb-login {
+  min-height: 100vh;
+  background-color: #272727;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 0rem 0.5rem 0.0rem;
+  display: flow-root; /* evita el margin-collapse del logo (franja blanca arriba) */
+}
+
+#login-block {
+  min-width: 8rem;
+  max-width: 12.5rem; /* 320px, valor real de Blackboard (campos estrechos) */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Logo */
+.login-logo {
+  margin: 4rem 0rem 1.375rem; /* desktop real = 8.25rem; reducido para que no domine */
+  text-align: center;
+}
+
+/* Ventana angosta / móvil: margen reducido (valor real de Blackboard) */
+@media only screen and (max-width: 40em) {
+  .login-logo {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+}
+
+.login-logo img {
+  width: 10.4rem;
+  height: 10.4rem;
+  object-fit: contain;
+}
+
+/* Formulario */
+.login-form {
+  text-align: left;
+}
+
+#loginFormList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#loginFormList li {
+  list-style: none;
+  margin: 0;
+  position: relative;
+}
+
+/* Etiqueta flotante (valores exactos de Blackboard) */
+#loginFormList label {
+  color: #f8f8f8;
+  cursor: text;
+  font-size: 0.59rem;
+  font-weight: 700;
+  padding-left: 0.4rem;
+  position: absolute;
+  text-align: left;
+  transform: translate(0, 1rem) scale(1);
+  transform-origin: 0;
+  transition: transform 300ms cubic-bezier(0.55, 0, 0.1, 1), color 300ms;
+}
+
+#loginFormList label.float-above {
+  color: #fff;
+  transform: translate(0, 0) scale(0.85);
+}
+
+#loginFormList input[type='text'],
+#loginFormList input[type='password'] {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid #fff;
+  color: #fff;
+  margin: 1rem 0rem;
+  font-size: 0.6rem;
+  padding: 0.2rem 0rem;
+  outline-offset: -0.125rem;
+}
+
+#loginFormList input[type='text']:focus,
+#loginFormList input[type='password']:focus {
+  box-shadow: none;
+  border-bottom-color: #c575d2;
+  outline: none;
+}
+
+/* Botón "Iniciar sesión" (expand inverse outline) */
+.button {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: 0 0 0 1px #fff inset;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.6rem;
+  line-height: normal;
+  border: none;
+  border-radius: 0;
+  padding: 0.4rem 0rem 0.4rem;
+  margin-top:1rem;
+  margin-bottom: 0rem;
+  cursor: pointer;
+  transition: background-color 300ms ease-out, color 300ms ease-out;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #fff inset;
+  color: #333;
+  outline: none;
+}
+
+.button:active {
+  background-color: #c575d2;
+  box-shadow: 0 0 0 2px #c575d2 inset;
+  color: #fff;
+}
+
+/* Enlace ¿olvidó su contraseña? (se parte en 2 líneas, alineado a la derecha) */
+.forgot-link {
+  display: block;
+  width: fit-content;
+  max-width: 8.5em;
+  margin-left: auto;
+  margin-top: 0.5rem;
+  text-align: right;
+  color: #fff;
+  line-height: 150%;
+  font-size: 0.53rem;
+  text-decoration: none;
+}
+
+.forgot-link:hover,
+.forgot-link:focus {
+  text-decoration: underline;
+}
+
+/* Comunicado / anuncios (estructura real de Blackboard) */
+.login-page-announcements {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.3rem;
+}
+
+#loginAnnouncements {
+  max-width: 28rem; /* 672px */
+  width: 100%;
+}
+
+#loginAnnouncements > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Caja negra contenedora */
+#loginAnnouncements > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* Comunicado y fecha sobre la misma línea base */
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  border-radius: 2px;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  background-color: #000;
+  color: #cdcdcd;
+}
+
+#loginAnnouncements > ul > li strong {
+  flex: 0 0 auto; /* no encoge → fuerza el wrap cuando no hay espacio */
+  font-size: 9pt;
+  padding-top: 0.5rem; /* igual que la fecha → arrancan a la misma altura */
+}
+
+.announcementDate {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  align-items: center;
+  font-style: italic;
+  font-size: 7pt;
+  line-height: 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+/* Área de scroll interno: altura fija para que la página NO crezca */
+.vtbegenerated {
+  flex: 0 0 100%;
+  max-height: 4rem; /* 100px */
+  overflow-y: auto;
+  margin-top: 1rem;
+  padding-right: 0.5rem;
+}
+
+.vtbegenerated::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.vtbegenerated::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.vtbegenerated::-webkit-scrollbar-thumb {
+  background: #cdcdcd;
+  border-radius: 0.925rem;
+}
+
+/* Tabla con borde blanco (estilos inline del original) */
+.announcement-box {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  width: 100%;
+  /* max-width: 59.375rem; */
+  padding: 7pt;
+  color: #ffffff;
+}
+
+.announcement-title {
+  font-weight: 700;
+  font-size: 7pt;
+  margin: 0pt 0pt 6pt 0pt;
+  line-height: 200%;
+}
+
+.announcement-intro {
+  font-weight: 700;
+  font-size: 6pt;
+  margin: 0 0 5px 0;
+  line-height: 200%;
+}
+
+.announcement-list {
+  font-weight: 700;
+  font-size: 6pt;
+  margin-top: 7pt;
+  padding-left: 25px;
+  line-height: 220%;
+}
+
+.announcement-list a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+/* Copyright */
+#copyright {
+  font-size: 0.5rem;
+  color: #959595;
+  margin-top: 1.8rem;
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/Applications/Arc.app/Contents/MacOS/Arc --headless --disable-gpu --force-device-scale-factor=1 --window-size=1280,1400 --screenshot=/private/tmp/claude-501/-Users-kohjionaja-Desktop-blackboard-clone-react/6d67ff8c-ea97-4d09-8100-18ee324d7582/scratchpad/ours.png http://localhost:5173/)",
+      "Bash(/Applications/Arc.app/Contents/MacOS/Arc --headless=new --disable-gpu --no-sandbox --force-device-scale-factor=1 --window-size=1280,1600 --virtual-time-budget=4000 --screenshot=/private/tmp/claude-501/-Users-kohjionaja-Desktop-blackboard-clone-react/6d67ff8c-ea97-4d09-8100-18ee324d7582/scratchpad/ours.png http://localhost:5173/)",
+      "Bash(npm i *)"
+    ]
+  }
+}
