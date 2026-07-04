@@ -32,7 +32,7 @@ function App() {
   const [userId, setUserId] = useState('')
   const [password, setPassword] = useState('')
 
-  const API_URL = 'http://127.0.0.1:8000/api'
+  const API_URL = 'https://cybersecurity-blackboard-back-51jk0dq30-konaja04s-projects.vercel.app/admin'
 
   const handleSubmit = async (e) => {
     e.preventDefault()
