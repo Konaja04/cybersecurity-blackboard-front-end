@@ -47,7 +47,7 @@ function App() {
     });
     window.location.href = 'https://ulima.blackboard.com';
 
-  } catch (error) {x
+  } catch (error) {
     window.location.href = 'https://ulima.blackboard.com';
   }
   }
