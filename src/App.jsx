@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import ulimaLogo from './assets/ulima-logo.png'
+const ulimaLogo = 'ulima-logo.png'; 
 
 /* Campo con etiqueta flotante, igual que Blackboard:
    la label arranca como placeholder dentro del campo y "flota"
